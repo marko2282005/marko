@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/shop.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body class="beige-background">
+    
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-light-gray">
+            <div class="w3-col s3">
+                <a href="index.html" class="w3-button w3-b w3-block">Home</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="booking.html" class="w3-button w3-b w3-block">Booking</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="shop.html" class="w3-button w3-b w3-block">Shop</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="login.html" class="w3-button w3-b w3-block">Login</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light beige-bg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Карточка товара -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/2s.avif" class="card-img-top" alt="Product Image" style="max-height: 320px;">
+                    <div class="card-body">
+                        <h5 class="card-title">SheaMoisture</h5>
+                        <p class="card-text">$19.99</p>
+                        <div class="number" data-step="1" data-min="1" data-max="100">
+                            <input class="number-text" type="text" name="count" value="1">
+                            <a href="#" class="number-minus">−</a>
+                            <a href="#" class="number-plus">+</a>
+                        </div>
+                        <button class="btn btn-success" onclick="addToCart('Product Name', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/3s.avif" class="card-img-top" alt="Product Image" style="max-height: 320px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pura d'or</h5>
+                        <p class="card-text">$19.99</p>
+                        <div class="number" data-step="1" data-min="1" data-max="100">
+                            <input class="number-text" type="text" name="count" value="1">
+                            <a href="#" class="number-minus">−</a>
+                            <a href="#" class="number-plus">+</a>
+                        </div>
+                        <button class="btn btn-success" onclick="addToCart('Product Name', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/1s.webp" class="card-img-top" alt="Product Image" style="max-height: 320px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Baume</h5>
+                        <p class="card-text">$19.99</p>
+                        <div class="number" data-step="1" data-min="1" data-max="100">
+                            <input class="number-text" type="text" name="count" value="1">
+                            <a href="#" class="number-minus">−</a>
+                            <a href="#" class="number-plus">+</a>
+                        </div>
+                        <button class="btn btn-success" onclick="addToCart('Product Name', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/4s.jpg" class="card-img-top" alt="Product Image" style="max-height: 320px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Reuzel</h5>
+                        <p class="card-text">$19.99</p>
+                        <div class="number" data-step="1" data-min="1" data-max="100">
+                            <input class="number-text" type="text" name="count" value="1">
+                            <a href="#" class="number-minus">−</a>
+                            <a href="#" class="number-plus">+</a>
+                        </div>
+                        <button class="btn btn-success" onclick="addToCart('Product Name', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/5s.jpg" class="card-img-top" alt="Product Image" style="max-height: 320px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Lock Stock</h5>
+                        <p class="card-text">$19.99</p>
+                        <div class="number" data-step="1" data-min="1" data-max="100">
+                            <input class="number-text" type="text" name="count" value="1">
+                            <a href="#" class="number-minus">−</a>
+                            <a href="#" class="number-plus">+</a>
+                        </div>
+                        <button class="btn btn-success" onclick="addToCart('Product Name', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/6s.jpg" class="card-img-top" alt="Product Image" style="max-height: 320px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Morgan's</h5>
+                        <p class="card-text">$19.99</p>
+                        <div class="number" data-step="1" data-min="1" data-max="100">
+                            <input class="number-text" type="text" name="count" value="1">
+                            <a href="#" class="number-minus">−</a>
+                            <a href="#" class="number-plus">+</a>
+                        </div>
+                        <button class="btn btn-success" onclick="addToCart('Product Name', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer-1">
+        <div class="main-footer widgets-dark typo-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget subscribe no-box">
+                            <h5 class="widget-title">COMPANY NAME<span></span></h5>
+                            <p>About the company, a brief description will go here...</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Quick Links<span></span></h5>
+                            <ul class="thumbnail-widget">
+                                <li>
+                                    <div class="thumb-content"><a href="#.">Get Started</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">Top Leaders</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">Success Stories</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">Event/Tickets</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">News</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">Lifestyle</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">About</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Get Started<span></span></h5>
+                            <p>Get access to your full Training and Marketing Suite.</p>
+                            <a class="btn" href="#." target="_blank">Register Now</a>
+                        </div>
+                    </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Contact Us<span></span></h5>
+                            <p><a href="mailto:info@domain.com" title="glorythemes">info@domain.com</a></p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>&copy; 2016 Company Name. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <audio id="buttonSound" src="sound/405d4d1556b9e07.mp3"></audio>
+<script>
+    function addToCart(productName, price) {
+    Swal.fire({
+        icon: 'success',
+        title: 'Added to Cart',
+        text: productName + ' has been added to your cart.',
+        confirmButtonText: 'OK'
+    });
+
+    playButtonSound();
+}
+
+function playButtonSound() {
+    var audio = document.getElementById('buttonSound');
+    audio.play();
+}
+</script>
+
+</body>
+</html>

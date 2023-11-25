@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Booking</title>
+</head>
+<body class="beige-background">
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-light-gray">
+            <div class="w3-col s3">
+                <a href="index.html" class="w3-button w3-b w3-block">Home</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="booking.html" class="w3-button w3-b w3-block">Booking</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="shop.html" class="w3-button w3-b w3-block">Shop</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="vacancies.html" class="w3-button w3-b w3-block">Vacancies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <form id="bookingForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="service">Service:</label>
+        <select id="service" name="service" required>
+            <option value="haircut">Haircut</option>
+            <option value="shave">Beard Trimming</option>
+            <option value="beard">Hair Trim</option>
+            <option value="beard">Kid's Cut</option>
+            <option value="beard">Haircut & Shave</option>
+            <option value="beard">Buzz</option>
+            <option value="beard">Beard Trim</option>
+        </select>
+
+        <label for="time">Time:</label>
+        <input type="datetime-local" id="time" name="time" required>
+
+        <button type="button" onclick="submitForm()">Book</button>
+    </form>
+
+    <audio id="bookSound">
+        <source src="sound/117b84d0f296403.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function submitForm() {
+            showSuccessPopup();
+            playBookSound(); 
+            $('#bookingForm')[0].reset();
+        }
+
+        function showSuccessPopup() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Your booking has been successfully made.',
+                confirmButtonText: 'OK'
+            });
+        }
+
+        function playBookSound() {
+            var audio = document.getElementById('bookSound');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
